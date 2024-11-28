@@ -15,7 +15,6 @@ public class Desafio01Application implements CommandLineRunner{
 		SpringApplication.run(Desafio01Application.class, args);
 	}
 	
-	//registrar a dependência da aplicação com o serviço OrderService
 	@Autowired
 	private OrderService orderService;
 		
