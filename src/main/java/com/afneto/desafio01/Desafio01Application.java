@@ -15,6 +15,15 @@ public class Desafio01Application implements CommandLineRunner{
 		SpringApplication.run(Desafio01Application.class, args);
 	}
 
+	
+	//registrar a dependência da aplicação com o serviço OrderService
+	private OrderService orderService;
+		
+	public Desafio01Application(OrderService orderService) {
+		super();
+		this.orderService = orderService;
+	}
+
 	@Override
 	public void run(String... args) throws Exception {
 		
@@ -25,20 +34,17 @@ public class Desafio01Application implements CommandLineRunner{
 		Order o2 = new Order(2282, 800.00, 10.00);
 		Order o3 = new Order(1309, 95.90, 0.00);
 		
-		ShippingService ss = new ShippingService();
-		OrderService os = new OrderService(ss);
-		
-		
 		System.out.println("Pedido código " + o1.getCode());
-		System.out.printf("valor total: R$ %.2f%n%n", os.total(o1));
+		System.out.printf("valor total: R$ %.2f%n%n", orderService.total(o1));
 
 		System.out.println("Pedido código " + o2.getCode());
-		System.out.printf("valor total: R$ %.2f%n%n", os.total(o2));
+		System.out.printf("valor total: R$ %.2f%n%n", orderService.total(o2));
 		
 		System.out.println();
 		System.out.println("Pedido código " + o3.getCode());
-		System.out.printf("valor total: R$ %.2f%n%n", os.total(o3));
+		System.out.printf("valor total: R$ %.2f%n%n", orderService.total(o3));
 
+		System.out.println("Desafio 01 concluído!");
 		
 	}
 

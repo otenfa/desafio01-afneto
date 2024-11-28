@@ -6,18 +6,18 @@ import com.afneto.desafio01.entities.Order;
 
 @Service
 public class OrderService {
-
-	private ShippingService ss;
 	
-	public OrderService(ShippingService ss) {
-		this.ss = ss;
+	private ShippingService shippingService;
+
+	public OrderService(ShippingService shippingService) {
+		this.shippingService = shippingService;
 	}
 
 	public double total(Order order) {
 		
 		return order.getBasic() 
 				- (order.getBasic()*(order.getDiscount()/100)) 
-				+ ss.shipment(order);
+				+ shippingService.shipment(order);
 	}
 
 	
