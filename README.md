@@ -16,9 +16,9 @@ Quando o valor básico do pedido (sem desconto),
 ## PASSOS
 1. criação do projeto Spring Boot.
 2. criação da entidade domínio e demais componentes (serviços), calculo da nota e aplicação do frete cabível.
-3. teste e execução aplicando o método "construction injection" - branch número: 
-4. teste e execução aplicando o método "field injection" - branch número: 
-5. teste e execução aplicando o método "setter injection" - branch número: 
+3. teste e execução aplicando o método "construction injection" - branch número: 743979c 
+4. teste e execução aplicando o método "field injection" - branch número: 51fb2fe
+5. teste e execução aplicando o método "setter injection" - branch número: aaa28bc
 
 
 
