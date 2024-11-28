@@ -1,12 +1,12 @@
 package com.afneto.desafio01;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.afneto.desafio01.entities.Order;
 import com.afneto.desafio01.services.OrderService;
-import com.afneto.desafio01.services.ShippingService;
 
 @SpringBootApplication
 public class Desafio01Application implements CommandLineRunner{
@@ -14,16 +14,11 @@ public class Desafio01Application implements CommandLineRunner{
 	public static void main(String[] args) {
 		SpringApplication.run(Desafio01Application.class, args);
 	}
-
 	
 	//registrar a dependência da aplicação com o serviço OrderService
+	@Autowired
 	private OrderService orderService;
 		
-	public Desafio01Application(OrderService orderService) {
-		super();
-		this.orderService = orderService;
-	}
-
 	@Override
 	public void run(String... args) throws Exception {
 		
