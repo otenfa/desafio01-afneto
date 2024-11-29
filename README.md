@@ -13,6 +13,10 @@ Quando o valor básico do pedido (sem desconto),
 02. estiver entre R$ 100.00 e R$ 200.00 (exclusive), o frete será de R$ 12.00
 03. for superior a R$ 200.00 NÂO HAVERÁ cobrança de frete.
 
+## Tabela
+![image](https://github.com/user-attachments/assets/83ef9683-ec27-4a83-b467-20c37d4fc6dc)
+
+
 ## PASSOS
 1. criação do projeto Spring Boot.
 2. criação da entidade domínio e demais componentes (serviços), calculo da nota e aplicação do frete cabível.
