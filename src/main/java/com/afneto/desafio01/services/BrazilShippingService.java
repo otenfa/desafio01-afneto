@@ -9,14 +9,15 @@ public class BrazilShippingService extends ShippingService {
 
 	@Override
 	public double shipment(Order order) {
-		
+
 		if (order.getBasic() < 100.00) {
-			return 40.00;
+			return 20.00;
 		} else if (order.getBasic() >= 100.00 && order.getBasic() < 200.00) {
-			return 24.00;
+			return 12.00;
 		}else {
-			return 10.00;
+			return 0;
 		}
+
 	}
 	
 }
